@@ -2,18 +2,16 @@ return {
   'vyfor/cord.nvim',
   build = ':Cord update',
   lazy = false,
-  config = function()
-    require('cord').setup {
-     {
+  opts = {
   enabled = true,
   log_level = vim.log.levels.OFF,
   editor = {
     client = 'neovim',
-    tooltip = 'The Superior Text Editor',
+    tooltip = 'SiLENT',
     icon = nil,
   },
   display = {
-    theme = 'default',
+    theme = 'atom',
     flavor = 'dark',
     view = 'full',
     swap_fields = false,
@@ -105,6 +103,4 @@ return {
     },
   },
 }
-    }
-  end,
 }
