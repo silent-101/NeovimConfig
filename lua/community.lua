@@ -6,8 +6,9 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-   { import = "astrocommunity.pack.typescript" },
-   { import = "astrocommunity.pack.tailwindcss" },
-   { import = "astrocommunity.pack.cpp" },
-   { import = "astrocommunity.pack.rust" }
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.bash" },
 }

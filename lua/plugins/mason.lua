@@ -12,21 +12,20 @@ return {
         -- install language servers
         "lua-language-server",
         "vtsls",
+        "clangd",
+        "rust-analyzer",
 
         -- install formatters
         "stylua",
+        "prettierd",
+        "shfmt",
+
+        -- install debuggers
+        "debugpy",
 
         -- install any other package
         "tree-sitter-cli",
       },
     },
-  },
-  {
-    "AstroNvim/astrolsp",
-    opts = function(_, opts)
-      opts.handlers = opts.handlers or {}
-      opts.handlers.ts_ls = false
-      opts.handlers.tsserver = false
-    end,
   },
 }

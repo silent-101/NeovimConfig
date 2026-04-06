@@ -38,7 +38,6 @@ return {
     end,
   },
 
-  -- Keep only blink.cmp active for completion UI.
   {
     "hrsh7th/nvim-cmp",
     enabled = false,

@@ -68,6 +68,7 @@ return {
         TabLineSel = { bg = "#1a2333", bold = true },
         WinBar = { bg = "#0f131a" },
         WinBarNC = { bg = "#0b0e14" },
+        SignColumn = { bg = "#0b0e14" },
         Pmenu = { bg = "#0b0e14" },
         PmenuSel = { bg = "#151c28" },
         PmenuSbar = { bg = "#0f131a" },
