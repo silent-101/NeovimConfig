@@ -1,3 +1,5 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -23,7 +25,18 @@ return {
       underline = true,
     },
     -- passed to `vim.filetype.add`
-    filetypes = {},
+    filetypes = {
+      -- see `:h vim.filetype.add` for usage
+      extension = {
+        foo = "fooscript",
+      },
+      filename = {
+        [".foorc"] = "fooscript",
+      },
+      pattern = {
+        [".*/etc/foo/.*"] = "fooscript",
+      },
+    },
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
@@ -32,17 +45,6 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
-        clipboard = "unnamedplus",
-        cursorline = true,
-        splitbelow = true,
-        splitright = true,
-        ignorecase = true,
-        smartcase = true,
-        updatetime = 250,
-        timeoutlen = 400,
-        scrolloff = 6,
-        sidescrolloff = 6,
-        undofile = true,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -70,10 +72,6 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
-        ["<Leader>w"] = { "<cmd>w<cr>", desc = "Save" },
-        ["<Leader>q"] = { "<cmd>q<cr>", desc = "Quit" },
-        ["<Leader>W"] = { "<cmd>wa<cr>", desc = "Save all" },
-        ["<Leader>Q"] = { "<cmd>qa<cr>", desc = "Quit all" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
